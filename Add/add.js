@@ -1,9 +1,12 @@
-const movieName = document.querySelector("#name");
+const name = document.querySelector("#filmName");
 const movieDirector = document.querySelector("#director");
 const rating = document.querySelector("#rating");
 const linkImg = document.querySelector("#linkImg");
 const linkVideo = document.querySelector("#linkVideo");
 const year = document.querySelector("#year");
+const description = document.querySelector("#description");
+const category = document.querySelector("#category");
+const runtime = document.querySelector("#runtime");
 const submit = document.querySelector("#submit");
 const errorName = document.querySelector("#div-one-error");
 const errorDirector = document.querySelector("#div-two-error");
@@ -13,32 +16,24 @@ const errorVideo = document.querySelector("#div-five-error");
 const errorYear = document.querySelector("#div-six-error");
 const dark = document.querySelector(".dark");
 //const list = document.querySelector("#list");
+const submitTest = document.querySelector("#submit-test");
 
 let formulaString = /^[a-zA-Z_]+( [a-zA-Z_]+)*$/;
 let formulaNumber = /^\d{10}$/;
 
 let stringCheck, valid;
 
-const movie = {
+let movie = {
   name: "",
   director: "",
   rating: "",
-  image: "",
-  video: "",
-  year: ""
+  photo: "",
+  year: "",
+  category:"",
+  runtime:"",
+  description:""
 };
 
-
-fetch("http://localhost:3001/filme", {
-  method: "POST",
-  body: JSON.stringify(movie),
-  headers: {
-    "Content-type": "application/json; charset=UTF-8",
-  },
-})
-  .then((response) => response.json())
-  .then((json) => console.log(json));
-  
 const addMovie = () => {
     fetch("http://localhost:3001/filme", {
     method: "POST",
@@ -46,17 +41,12 @@ const addMovie = () => {
     headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
-    })
-      .then((response) => response.json())
-      localStorage.setItem("movie", movie.name);
-      console.log(movie);
-     
-}; 
+    })   
+    console.log(movie); 
+};
 
 submit.addEventListener("click", addMovie);
-
-
-
+/*
 movieName.addEventListener("change", (e) => {
   movie.name = e.target.value;
   stringCheck = movie.name;
@@ -68,7 +58,7 @@ movieName.addEventListener("change", (e) => {
   
     valid = false;
   }
-});
+});*/
 
 movieDirector.addEventListener("change", (e) => {
   movie.director = e.target.value;
