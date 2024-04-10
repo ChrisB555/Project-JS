@@ -1,0 +1,22 @@
+#footer{
+    background-color: black;
+    color: white;
+    height: 135px;
+}
+.footer-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logo-footer{
+    margin-right: 80px;
+    width: 80px;
+    margin-top: 30px;
+}
+.terms{
+    margin-left: 80px;
+    margin-top: 20px;
+}
+.copyright{
+    text-align: center;
+}
