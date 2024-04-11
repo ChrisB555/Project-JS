@@ -2,114 +2,124 @@
   "filme": [
     {
       "id": 0,
-      "filmName": "Dune",
+      "name": "Dune",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTosiakSJLlEaoCkWXVL70vdO3Wdv45JsAU_w&s",
       "description": "Dune: Part Two picks up right where the first movie left off, with Paul and his mother, Lady Jessica (Rebecca Ferguson), navigating an alliance with the Fremen, the native people of Arrakis, while seeking revenge against those who destroyed their family.",
       "runtime": "2h 46 min",
       "rating": "5",
       "director":"Denis Villeneuve",
       "year":"2024",
-      "category":"Action, SF"
+      "category":"Action, SF",
+      "video" : "https://www.youtube.com/watch?v=Way9Dexny3w"
     },
     {
       "id": 1,
-      "filmName": "The Gentleman",
+      "name": "The Gentleman",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-vtRyOTuCOtOYPKE3HMZVbvkhXhxj1UulUA&s",
       "description": "An American expat tries to sell off his highly profitable marijuana empire in London, triggering plots, schemes, bribery and blackmail in an attempt to steal his domain out from under him.",
       "runtime": "1h 53 min",
       "rating": "4.5",
       "director":"Guy Ritchie",
       "year":"2024",
-      "category":"Action"
+      "category":"Action",
+      "video":"https://www.youtube.com/watch?v=wyEOwHrpZH4"
     },
     {
       "id": 2,
-      "filmName": "Godzilla x Kong",
+      "name": "Godzilla x Kong",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOMO8ulBAQQXLbVWFdXmfdV7a7RpL5Myo-Og&s",
       "description":"In Godzilla x Kong, King Kong is in Hollow Earth searching for his lost species. In this way the film is something of a sequel to director Adam Wingard's 2021 Godzilla vs Kong. In it, Kong discovers an enslaved giant ape community near the heart of the Hollow Earth, under the control of the Skar King.",
       "runtime": "1h 55min",
       "rating": "3.5",
       "director":"Adam Wingard",
       "year":"2024",
-      "category":"Action"
+      "category":"Action",
+      "video":"https://www.youtube.com/watch?v=qqrpMRDuPfc"
     },
     {
       "id": 3,
-      "filmName": "Oppenheimer",
+      "name": "Oppenheimer",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfAFNtt8ASSK9KZJ46hXY2tr_C8thD8XOrng&s",
       "description":"Oppenheimer is a 2023 epic biographical thriller film written, directed, and produced by Christopher Nolan. It follows the life of J. Robert Oppenheimer, the American theoretical physicist who helped develop the first nuclear weapons during World War II.",
       "runtime": "3h",
       "rating": "5",
       "director":"Christopher Nolan",
       "year":"2023",
-      "category":"Thriller"
+      "category":"Thriller",
+      "video":"https://www.youtube.com/watch?v=uYPbbksJxIg"
     },
     {
       "id": 4,
-      "filmName": "Arthur the King ",
+      "name": "Arthur the King ",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-vL1TkNrt66kiVmV00r-paNITdN0Qnm-EGA&s",
-      "description":"“Arthur the King” is based on the true story of one of these races, with an American team racing through the jungles, mountains, and rivers of the Dominican Republic (the real story involved a Swedish team in Ecuador). Mark Wahlberg plays team leader Michael Light, who bonds with a stray dog he names Arthur.",
+      "description":"“Arthur the King” is based on the true story of one of these races, with an American team racing through the jungles, mountains, and rivers of the Dominican Republic (the real story involved a Swedish team in Ecuador). Mark Wahlberg plays team leader Michael Light, who bonds with a stray dog he moviemovieNames Arthur.",
       "runtime": "1h 48 min",
       "rating": "4",
       "director":"Simon Cellan Jones",
       "year":"2023",
-      "category":"Drama"
+      "category":"Drama",
+      "video":"https://www.youtube.com/watch?v=wjDJNEPghNY"
     },
   
     {
       "id": 5,
-      "filmName": "Ghostbusters:</br>Frozen Empire",
+      "name": "Ghostbusters:</br>Frozen Empire",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd2B0Nx3QqUgmiDUmqzP2TFiZrn274i1OWvQ&s",
       "description":"In Ghostbusters: Frozen Empire, the Spengler family returns to where it all started – the iconic New York City firehouse – to team up with the original Ghostbusters, who've developed a top-secret research lab to take busting ghosts to the next level.",
       "runtime": "1h 55 min",
       "rating": "3",
       "director":"Gil Kenan",
       "year":"2022",
-      "category":"Action, SF"
+      "category":"Action, SF",
+      "video":"https://www.youtube.com/watch?v=HpOBXh02rVc"
     },
     {
       "id": 6,
-      "filmName": "Barbie ",
+      "name": "Barbie ",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOPhrbpjcwvDoUc0rGY52cAhUE7853fy0g5g&s",
       "description":"Barbie, an 11-inch- (29-cm-) tall plastic doll with the figure of an adult woman that was introduced on March 9, 1959, by Mattel, Inc., a southern California toy company. Ruth Handler, who cofounded Mattel with her husband, Elliot, spearheaded the introduction of the doll.",
       "runtime": "1h 54 min",
       "rating": "3",
       "director":" Greta Gerwig",
       "year":"2023",
-      "category":"Adventure, Comedy"
+      "category":"Adventure, Comedy",
+      "video":"https://www.youtube.com/watch?v=pBk4NYhWNMM"
     },
     {
       "id": 7,
-      "filmName": "Kung Fu Panda 4",
+      "name": "Kung Fu Panda 4",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtdtgncXuzZFdxzHSlfSrZabKUCSMP9PdLRw&s",
       "description":"Po is gearing up to become the spiritual leader of his Valley of Peace, but also needs someone to take his place as Dragon Warrior. As such, he will train a new kung fu practitioner for the spot and will encounter a villain called the Chameleon who conjures villains from the past.",
       "runtime": "1h 48 min",
       "rating": "4",
       "director":"Mike Mitchell",
       "year":"2024",
-      "category":"Adventure, Comedy"
+      "category":"Adventure, Comedy",
+      "video":"https://www.youtube.com/watch?v=_inKs4eeHiI"
     },
     {
       "id": 8,
-      "filmName": "Poor Things ",
+      "name": "Poor Things ",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4GLfK71zrPOeR9S-ESnpJjwIXIspyF8BeMw&s",
       "description":"It focuses on Bella Baxter, an infant in the body of an adult woman in Victorian London who is saved from her mother's suicide via brain transplant and embarks on an odyssey of self-discovery. Principal photography took place in Hungary from August to December 2021.",
       "runtime": "2h 21 min",
       "rating": "4",
       "director":"uuuu",
       "year":"2023",
-      "category":"Drama, Comedy"
+      "category":"Drama, Comedy",
+      "video":"https://www.youtube.com/watch?v=S5KiC0GgED0"
     },
     {
       "id": 9,
-      "filmName": "Uncharted",
+      "name": "Uncharted",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmL4uzTcJzfL7jILn2pvFyIQ9sxHsBXhxiEg&s",
       "description":"Uncharted is an action-adventure video game franchise published by Sony Interactive Entertainment and developed by Naughty Dog. Created by Amy Hennig, the Uncharted franchise follows a group of treasure hunters who travel across the world to uncover various historical mysteries.",
       "runtime": "1h 56 min",
       "rating": "3.5",
       "director":"Ruben Fleischer",
       "year":"2022",
-      "category":"Adventure"
+      "category":"Adventure",
+      "video":"https://www.youtube.com/watch?v=eHp3MbsCbMg"
     }
   ]
 }
