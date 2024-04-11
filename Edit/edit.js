@@ -59,7 +59,7 @@ const displayMovie = (movie) => {
   for (let film of movie) {
     listDisplay.innerHTML = `<div id = "display-filme" target="_blank">
         <img class="display-img" src=${film.photo}/> 
-        <h1>${film.filmName}</h1> 
+        <h1>${film.name}</h1> 
         <h3>Director:${film.director}   Year:${film.year}</h3> 
         <p id="display-p">Description :${film.description} </p>
         </div>`;

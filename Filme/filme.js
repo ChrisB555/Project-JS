@@ -21,7 +21,7 @@ const main = async () => {
   date.forEach((element) => {
     let p = `<a id = "lista-filme" target="_blank">
        <img class="main-img"src=${element.photo}/> 
-       <h3 id="h4">${element.filmName}</h3> 
+       <h3 id="h4">${element.name}</h3> 
        <h5>Director: ${element.director}</h5> 
        <h5>Release year: ${element.year}</h5> 
        <h5>Ratings: ${element.rating} 
@@ -63,7 +63,7 @@ const displayMovie = (movie) => {
   for (let film of movie) {
     listDisplay.innerHTML = `<div id = "display-filme" target="_blank">
         <img class="display-img" src=${film.photo}/> 
-        <h1>${film.filmName}</h1> 
+        <h1>${film.name}</h1> 
         <h3>Director:${film.director}   Year:${film.year}</h3> 
         <p id="display-p">Description :${film.description} </p>
         </div>`;
