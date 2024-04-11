@@ -5,12 +5,13 @@ const listDisplay = document.querySelector("#list-display");
 const error = document.querySelector("#error");
 const reset = document.querySelector("#reset");
 
-let filme,found;
+let filme, found;
 let searchMovie = "";
 
 const getMovies = async () => {
-  const filmeLocal = await fetch("http://localhost:3001/filme/")
-  .then((response) => response.json());
+  const filmeLocal = await fetch("http://localhost:3001/filme/").then(
+    (response) => response.json()
+  );
   return filmeLocal;
 };
 
@@ -41,17 +42,17 @@ searchBar.addEventListener("change", (e) => {
   if (searchMovie) {
     searchMovie = searchMovie.trim();
     displayMovie(
-     found = filme.filter((film) => {
+      (found = filme.filter((film) => {
         error.innerHTML = "";
         listDisplay.innerHTML = "";
         return film.filmName.toLowerCase().includes(searchMovie);
-      })
+      }))
     );
-  }else {
-    error.innerHTML = "Sorry!There is no movie with that name";   
-  };
-   if (found.length !== 0) {
-    displayMovie(found)
+  } else {
+    error.innerHTML = "Sorry!There is no movie with that name";
+  }
+  if (found.length !== 0) {
+    displayMovie(found);
   } else {
     error.innerHTML = "Sorry!There is no movie with that name";
     listDisplay.innerHTML = "";
@@ -71,8 +72,8 @@ const displayMovie = (movie) => {
 };
 
 reset.addEventListener("click", () => {
-  location.href = "file:///C:/IT/Proiect%20JS/Filme/filme.html";
-})
+  location.href = "filme.html";
+});
 
 dark.addEventListener("click", () => {
   let b = document.body;

@@ -14,7 +14,6 @@ let modal = document.querySelector("#modal");
 let filme;
 let idFilm = 0;
 
-
 const getMovies = async () => {
   const filmeLocal = await fetch("http://localhost:3001/filme/").then(
     (response) => response.json()
@@ -69,13 +68,12 @@ const displayMovie = (movie) => {
 };
 
 reset.addEventListener("click", () => {
-  location.href = "file:///C:/IT/Proiect%20JS/Edit/edit.html";
-})
+  location.href = "edit.html";
+});
 
 const redirect = () => {
-  location.href = "file:///C:/IT/Proiect%20JS/Edit%20form/editForm.html";
+  location.href = "../Edit form/editForm.html";
 };
-
 
 const deleteMovie = () => {
   modal.style.display = "block";
@@ -85,7 +83,7 @@ closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target === modal) {
     modal.style.display = "none";
   }
@@ -99,9 +97,9 @@ deleteModal.addEventListener("click", () => {
   modal.style.display = "none";
   fetch(`http://localhost:3001/filme/${idFilm}`, {
     method: "DELETE",
-    })
-      .then((response) => response.json())
-      .then((json) => console.log(json));
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 });
 
 dark.addEventListener("click", () => {
