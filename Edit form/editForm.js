@@ -1,50 +1,51 @@
 const movieName = document.querySelector("#name");
-const movieDirector = document.querySelector("#director");
+const director = document.querySelector("#director");
 const rating = document.querySelector("#rating");
-const linkImg = document.querySelector("#linkImg");
-const linkVideo = document.querySelector("#linkVideo");
+const photo = document.querySelector("#photo");
+const video = document.querySelector("#video");
 const year = document.querySelector("#year");
+const description = document.querySelector("#description");
+const category = document.querySelector("#category");
+const runtime = document.querySelector("#runtime");
+
 const submit = document.querySelector("#submit");
+
 const errorName = document.querySelector("#div-one-error");
-const errorDirector = document.querySelector("#div-two-error");
-const errorRating = document.querySelector("#div-three-error");
-const errorImg = document.querySelector("#div-four-error");
-const errorVideo = document.querySelector("#div-five-error");
-const errorYear = document.querySelector("#div-six-error");
+const errorDirector = document.querySelector("#div-six-error");
+const errorDescription = document.querySelector("#div-three-error");
+const errorRating = document.querySelector("#div-five-error");
+const errorPhoto = document.querySelector("#div-two-error");
+const errorVideo = document.querySelector("#div-nine-error");
+const errorRuntime = document.querySelector("#div-four-error");
+const errorYear = document.querySelector("#div-seven-error");
+const errorCategory = document.querySelector("#div-eight-error");
+const list = document.querySelector("#list");
+
 const dark = document.querySelector(".dark");
-const editBtn = document.querySelector("#editBtn");
-const deleteBtn = document.querySelector("#deleteBtn");
 
 let filme;
-let idFilm = 0;
-
-const movie = {
-  name: "",
-  director: "",
-  rating: "",
-  image: "",
-  video: "",
-  year: "",
-};
+let id = 2 ;
 
 let formulaString = /^[a-zA-Z_]+( [a-zA-Z_]+)*$/;
 let formulaNumber = /^\d{10}$/;
+let formulaUrl = /^https?:\/\/(www\.)?example\.com(?:\/.*)?$/;
+
 let stringCheck, valid;
 
-
-
-fetch("http://localhost:3001/filme", {
-  method: "POST",
-  body: JSON.stringify(movie),
-  headers: {
-    "Content-type": "application/json; charset=UTF-8",
-  },
-})
-  .then((response) => response.json());
-
+let movie = {
+  name: "",
+  photo: "",
+  description: "",
+  runtime: "",
+  rating: "",
+  year: "",
+  director: "",
+  category: "",
+  video: "",
+};
 
   const editMovie = () => {
-    fetch(`http://localhost:3001/filme/${idFilm}`, {
+    fetch(`http://localhost:3001/filme/${id}`, {
       method: "PUT",
       body: JSON.stringify(movie),
       headers: {
@@ -52,8 +53,7 @@ fetch("http://localhost:3001/filme", {
         },
       })
         .then((response) => response.json())
-        //.then((json) => console.log(json));
-      console.log(movie,idFilm);
+      console.log(movie,id);
   };
 
 submit.addEventListener("click", editMovie);
@@ -65,44 +65,105 @@ movieName.addEventListener("change", (e) => {
     errorName.innerHTML = "";
     valid = true;
   } else {
-    errorName.innerHTML = "Insert a valid name!"; 
+    errorName.innerHTML = "Insert a valid  movie name!";
     valid = false;
   }
 });
 
-movieDirector.addEventListener("change", (e) => {
+photo.addEventListener("change", (e) => {
+  movie.photo = e.target.value;
+  stringCheck = movie.photo;
+  if (stringCheck) {
+    errorPhoto.innerHTML = "";
+    valid = true;
+  } else {
+    errorPhoto.innerHTML = "Insert a valid  url!";
+    valid = false;
+  }
+});
+
+description.addEventListener("change", (e) => {
+  movie.description = e.target.value;
+  stringCheck = movie.description;
+  if (stringCheck) {
+    errorDescription.innerHTML = "";
+    valid = true;
+  } else {
+    errorDescription.innerHTML = "Insert a description!";
+    valid = false;
+  }
+});
+
+director.addEventListener("change", (e) => {
   movie.director = e.target.value;
   stringCheck = movie.director;
   if (stringCheck.match(formulaString) && !stringCheck.match(formulaNumber)) {
     errorDirector.innerHTML = "";
     valid = true;
   } else {
-    errorDirector.innerHTML = "Insert a valid name!";
+    errorDirector.innerHTML = "Insert a valid  director name!";
+    valid = false;
+  }
+});
+
+runtime.addEventListener("change", (e) => {
+  movie.runtime = e.target.value;
+  stringCheck = movie.runtime;
+  if (stringCheck) {
+    errorRuntime.innerHTML = "";
+    valid = true;
+  } else {
+    errorRuntime.innerHTML = "Insert the runtime!";
     valid = false;
   }
 });
 
 rating.addEventListener("change", (e) => {
-   movie.rating = e.target.value;
-    if (movie.rating > 0 && movie.rating <= 5) {
-      errorRating.innerHTML = "";
-      valid = true;
-    } else {
-      errorRating.innerHTML = "Insert a rating between 1 and 5! "; 
-      valid = false;
-    }
-  });
+  movie.rating = e.target.value;
+  if (movie.rating > 0 && movie.rating <= 5) {
+    errorRating.innerHTML = "";
+    valid = true;
+  } else {
+    errorRating.innerHTML = "Insert a rating between 1 and 5! ";
 
-  year.addEventListener("change", (e) => {
-    movie.year = e.target.value;
-     if (movie.year.length === 4 ) {
-       errorYear.innerHTML = "";
-       valid = true;
-     } else {
-       errorYear.innerHTML = "Insert a valid year! ";
-       valid = false;
-     }
-   });
+    valid = false;
+  }
+});
+
+year.addEventListener("change", (e) => {
+  movie.year = e.target.value;
+  if (movie.year.length === 4) {
+    errorYear.innerHTML = "";
+    valid = true;
+  } else {
+    errorYear.innerHTML = "Insert a valid year! ";
+    valid = false;
+  }
+});
+
+category.addEventListener("change", (e) => {
+  movie.category = e.target.value;
+  stringCheck = movie.category;
+  if (stringCheck) {
+    errorCategory.innerHTML = "";
+    valid = true;
+  } else {
+    errorCategory.innerHTML = "Insert a category!";
+    valid = false;
+  }
+});
+
+video.addEventListener("change", (e) => {
+  movie.video = e.target.value;
+  stringCheck = movie.video;
+  if (stringCheck) {
+    errorVideo.innerHTML = "";
+    valid = true;
+  } else {
+    errorVideo.innerHTML = "Insert a valid  url!";
+    valid = false;
+  }
+});
 
    dark.addEventListener("click", () => {
     let b = document.body;

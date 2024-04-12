@@ -12,7 +12,7 @@ const reset = document.querySelector("#reset");
 
 let modal = document.querySelector("#modal");
 let filme;
-let idFilm = 0;
+let idFilm = "";
 
 const getMovies = async () => {
   const filmeLocal = await fetch("http://localhost:3001/filme/").then(
@@ -21,20 +21,38 @@ const getMovies = async () => {
   return filmeLocal;
 };
 
+//am schimbat unele id-uri in clase pentru a putea folosi proprietatea "classList" - in concluzie am actualizat si legatura noilor clase cu css
 const main = async () => {
   const date = await getMovies();
   filme = date;
   date.forEach((element) => {
     let p = `<a id = "lista-filme" target="_blank">
-         <img class="main-img"src=${element.photo}/> 
-         <h3 id="h4">${element.filmName}</h3> 
-         <button id="editBtn" onclick="redirect()">Edit</button>
-         <button id="deleteBtn" onclick="deleteMovie()" >Delete</button>
+         <img class="main-img"src=${element.photo}/>
+         <div class="idul">${element.id}</div> 
+         <h3 class="h3">${element.name}</h3>
+         <button class="editBtn" onclick="redirect()">Edit</button>
+         <button class="deleteBtn" onclick="deleteMovie()" >Delete</button>
          </a>`;
     list.innerHTML += p;
   });
 };
-main();
+
+//functie asincrona care asteapta incarcarea list.innerHTML (altfel EventListener-ul iti da null) - adica se executa dupa main()
+const listen = async () => {
+  await main();
+
+  //dupa main initializam si cautam cu EventListener in tot body-ul pentru un click event - aici se identifica idul pentru DELETE - dar se mai poate introduce in continuare un IF si pt EDIT (editBtn)
+  document.body.addEventListener("click", function (event) {
+    if (event.target.classList.contains("deleteBtn")) {
+      idFilm = event.target.parentNode.children[1].textContent;
+      //console.log("continutul dorit", event, idFilm);
+    }
+  });
+};
+
+//apelam functia listen care contine si main()!!!
+listen();
+
 searchBar.addEventListener("change", (e) => {
   searchMovie = e.target.value;
   if (searchMovie) {
@@ -93,13 +111,22 @@ cancel.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-deleteModal.addEventListener("click", () => {
-  modal.style.display = "none";
+const deleteConfirmed = () => {
   fetch(`http://localhost:3001/filme/${idFilm}`, {
     method: "DELETE",
   })
     .then((response) => response.json())
     .then((json) => console.log(json));
+};
+
+deleteModal.addEventListener("click", () => {
+  modal.style.display = "none";
+  //am scris separat functia de deleteConfirmed pentru a putea face un reload la pagina imediat dupa - altfel nu permite sintaxa javascript sa scrii nimic dupa fetch
+  deleteConfirmed();
+  //face reload la pagina ca sa dispara filmul sters
+  setTimeout(function () {
+    location.reload();
+  }, 1000);
 });
 
 dark.addEventListener("click", () => {
