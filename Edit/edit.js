@@ -29,7 +29,7 @@ const main = async () => {
     let p = `<a id = "lista-filme" target="_blank">
          <img class="main-img"src=${element.photo}/>
          <div class="idul">${element.id}</div> 
-         <h3 class="h3">${element.filmName}</h3>
+         <h3 class="h3">${element.name}</h3>
          <button class="editBtn" onclick="redirect()">Edit</button>
          <button class="deleteBtn" onclick="deleteMovie()" >Delete</button>
          </a>`;

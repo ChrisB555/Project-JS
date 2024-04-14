@@ -32,7 +32,7 @@
     margin-top: 15px;
     cursor: pointer;
 }
-.dropdown-menu{
+.dropdown-menu1,.dropdown-menu2,.dropdown-menu3{
     list-style-type: none;
     position: absolute;
     display: none;
@@ -42,9 +42,13 @@
     padding: 10px;
     width: 170px;
     font-size: 24px;
+    margin-right: 50px;
 }
-.sort-dropdown:hover .dropdown-menu{
-    display: block;
+.drop-category:hover{
+    color:#35764F;
+}
+.drop-year:hover{
+    color:#35764F;
 }
 
 #film-img{
@@ -85,10 +89,16 @@
 #h4{
     color:#35764F ;
 }
-#star{
+#star,#halfStar{
     color: yellow;
     padding-left: 5px;
+    font-size: 20px;
 }
+#emptyStar{
+    padding-left: 5px;
+    font-size: 20px;
+}
+  
 #error{
     text-align: center;
     font-size: 20px;
