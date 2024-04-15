@@ -1,159 +1,3 @@
-
-.body{
-    background-color:  #D9D9D9;  
-    color: black;
-}
-.dark-mode{
-    background-color: black;
-    color:goldenrod;
-}
-.dark-mode #searchBar{
-    background-color: gold;
-    color: black;
-}
-.dark-mode #reset{
-    background-color: gold;
-    color: black;
-}
-.dark-mode #lista-filme{
-    height: auto;
-    border: 2px solid gold;
-    border-radius: 10px;
-    padding: 10px;
-    list-style-type: none;
-    font-size: 20px;
-    cursor: pointer;
-    margin: 20px;
-    text-decoration: none;
-    color:gold;
-}
-.dark-mode .editBtn{
-    background-color: gold;
-    color: black;
-}
-#navbar-sort{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: black;
-    height: 60px;
-    color: white;
-}
-#searchBar{
-    width: 100px;
-    height: 15px;
-    font-size: 16px;
-    margin-left: 100px;
-    border-radius: 5px;
-    margin-top: 13px;
-}
-#film-img{
-    width: fit-content;
-}
-.main-img{
-    width: 230px;
-    height: 170px;
-    margin:10px auto ;
-}
-#list{
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    margin: 70px auto;
-}
-#lista-filme{
-    height: auto;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 10px;
-    list-style-type: none;
-    font-size: 20px;
-    cursor: pointer;
-    margin: 20px;
-    text-decoration: none;
-}
-#display-filme{
-    text-align: center ;
-    margin-left:80px;
-    margin-right: 80px;
-}
-#error{
-    text-align: center;
-    font-size: 20px;
-    color: orangered;
-    margin-top: 30px;
-}
-#reset{
-    background-color: #35764F;
-    color: white;
-    width: 120px;
-    height: 30px;
-    font-size: 20px;
-    margin-top: 15px;
-    margin-right: 100px;
-}
-.editBtn{
-    background-color: #4C8ECC;
-    color:black;
-    width: 80px;
-    height: 32px;
-    font-size: 14px;
-    margin-left: 10px;
-}
-.deleteBtn{
-    background-color:  #D14848;
-    color:white;
-    width: 87px;
-    height: 32px;
-    font-size: 14px;
-    margin-left: 40px;
-}
-#modal{
-    display: none;
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-}
-.close{
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-.modal-content{
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    border-radius: 10px;
-    width:450px;
-}
-.modal-flex{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-#delete{
-    background-color:  #C20000;
-    color: white;
-    width: 140px;
-    height: 40px;
-    font-size: 14px;
-}
-#cancel{
-    background-color: #35764F ;
-    color: white;
-    width: 140px;
-    height: 40px;
-    font-size: 14px;
-}
-=======
 .body {
   background-color: #d9d9d9;
   color: black;
@@ -162,6 +6,153 @@
   background-color: black;
   color: goldenrod;
 }
+.dark-mode #searchBar {
+  background-color: gold;
+  color: black;
+}
+.dark-mode #reset {
+  background-color: gold;
+  color: black;
+}
+.dark-mode #lista-filme {
+  height: auto;
+  border: 2px solid gold;
+  border-radius: 10px;
+  padding: 10px;
+  list-style-type: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 20px;
+  text-decoration: none;
+  color: gold;
+}
+.dark-mode .editBtn {
+  background-color: gold;
+  color: black;
+}
+#navbar-sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  height: 60px;
+  color: white;
+}
+#searchBar {
+  width: 100px;
+  height: 15px;
+  font-size: 16px;
+  margin-left: 100px;
+  border-radius: 5px;
+  margin-top: 13px;
+}
+#film-img {
+  width: fit-content;
+}
+.main-img {
+  width: 230px;
+  height: 170px;
+  margin: 10px auto;
+}
+#list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 70px auto;
+}
+#lista-filme {
+  height: auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  list-style-type: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 20px;
+  text-decoration: none;
+}
+#display-filme {
+  text-align: center;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+#error {
+  text-align: center;
+  font-size: 20px;
+  color: orangered;
+  margin-top: 30px;
+}
+#reset {
+  background-color: #35764f;
+  color: white;
+  width: 120px;
+  height: 30px;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-right: 100px;
+}
+.editBtn {
+  background-color: #4c8ecc;
+  color: black;
+  width: 80px;
+  height: 32px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.deleteBtn {
+  background-color: #d14848;
+  color: white;
+  width: 87px;
+  height: 32px;
+  font-size: 14px;
+  margin-left: 40px;
+}
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 450px;
+}
+.modal-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#delete {
+  background-color: #c20000;
+  color: white;
+  width: 140px;
+  height: 40px;
+  font-size: 14px;
+}
+#cancel {
+  background-color: #35764f;
+  color: white;
+  width: 140px;
+  height: 40px;
+  font-size: 14px;
+}
+
 #navbar-sort {
   display: flex;
   flex-direction: row;
@@ -286,4 +277,3 @@
   height: 40px;
   font-size: 14px;
 }
-

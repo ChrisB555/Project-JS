@@ -1,57 +1,54 @@
-.body{
-    background-color:  #D9D9D9;  
-    color: black;
+.body {
+  background-color: #d9d9d9;
+  color: black;
 }
-.dark-mode{
-    background-color: black;
-    color:goldenrod;
-    
+.dark-mode {
+  background-color: black;
+  color: goldenrod;
 }
-.dark-mode #nav{
-    color:gold;
-    background-color: black;
-    border-bottom: 2px solid gold;
+.dark-mode #nav {
+  color: gold;
+  background-color: black;
+  border-bottom: 2px solid gold;
 }
-.dark-mode .link a{
-    color: gold;
+.dark-mode .link a {
+  color: gold;
 }
-#nav{
-    display: flex;
-    justify-content: space-around;
-    height: 78px;
-    background: #35764F;
+#nav {
+  display: flex;
+  justify-content: space-around;
+  height: 10vh;
+  width: 100vw;
+  background: #35764f;
 }
-.logo{
-    width: 100px;
-    margin: 10px;
-   
+.logo {
+  width: 100px;
+  margin: 10px;
 }
-.link-menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.link-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
-.link{
-    list-style-type: none;
-    margin: 10px;
+.link {
+  list-style-type: none;
+  margin: 10px;
 }
-.link a{
-    text-decoration: none;
-    font-size: 12px;
-    color: #FFECEC;
-    margin:20px;
-
+.link a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #ffecec;
+  margin: 20px;
 }
-#searchBar{
-    width: 200px;
-    height: 30px;
-    font-size: 20px;
+#searchBar {
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
 }
-.dark{
-    font-size: 28px;
-    height: 0px ;
-    margin-top: 25px;
+.dark {
+  font-size: 28px;
+  height: 0px;
+  margin-top: 25px;
 }
 
 /*responsive*/
-

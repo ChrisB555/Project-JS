@@ -1,38 +1,39 @@
-.body{
-    background-color:  #D9D9D9;  
-    color: black;
+.body {
+  background-color: #d9d9d9;
+  color: black;
 }
-.dark-mode{
-    background-color: black;
-    color:goldenrod;
+.dark-mode {
+  background-color: black;
+  color: goldenrod;
 }
-.dark-mode #form{
-    background-color: black;
-    color: gold;
-  }
-  .dark-mode #submit,.dark-mode #reset{
-    background-color: gold;
-    color: black;
-  }
-#form{
-    background-color: #D9D9D9;
-    text-align: center;
-    color: black; 
+.dark-mode #form {
+  background-color: black;
+  color: gold;
 }
-.input{
-    width: 500px;
-    height: 50px;
-    font-size: 16px;
-    margin: 10px auto;
-    padding-left: 10px;
+.dark-mode #submit,
+.dark-mode #reset {
+  background-color: gold;
+  color: black;
 }
-#name{
-    margin-top: 30px;
+#form {
+  background-color: #d9d9d9;
+  text-align: center;
+  color: black;
 }
-#submit{
-    background-color:  #1A3D71;
-    color: white;
-    width: 160px;
-    height: 37px;
-    margin: 20px auto;
+.input {
+  width: 500px;
+  height: 50px;
+  font-size: 16px;
+  margin: 10px auto;
+  padding-left: 10px;
+}
+#name {
+  margin-top: 30px;
+}
+#submit {
+  background-color: #1a3d71;
+  color: white;
+  width: 160px;
+  height: 37px;
+  margin: 20px auto;
 }
