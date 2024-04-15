@@ -5,6 +5,37 @@
 .dark-mode{
     background-color: black;
     color:goldenrod;
+    
+}
+.dark-mode #navbar-sort{
+    color:gold;
+}
+.dark-mode #searchBar{
+    background-color: gold;
+    color: black;
+}
+.dark-mode #reset{
+    background-color: gold;
+    color: black;
+}
+.dark-mode .dropdown-menu1,.dark-mode .dropdown-menu2,.dark-mode .dropdown-menu3{
+    background-color: gold;
+    color: black;
+}
+.dark-mode .drop-rate i{
+    color:black;
+}
+.dark-mode #lista-filme{
+    height: auto;
+    border: 2px solid gold;
+    border-radius: 10px;
+    padding: 10px;
+    list-style-type: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 20px;
+    text-decoration: none;
+    color:gold;
 }
 #navbar-sort{
     display: flex;
@@ -35,7 +66,7 @@
 .dropdown-menu1,.dropdown-menu2,.dropdown-menu3{
     list-style-type: none;
     position: absolute;
-    display: none;
+    visibility: hidden;
     cursor: pointer;
     background-color: black;
     color: white;
@@ -44,13 +75,20 @@
     font-size: 24px;
     margin-right: 50px;
 }
+.dropdown{
+   visibility: visible;
+
+}
 .drop-category:hover{
     color:#35764F;
 }
 .drop-year:hover{
     color:#35764F;
 }
-
+.drop-rate i{
+    font-size: 20px;
+    color: yellow;
+}
 #film-img{
     width: fit-content;
 }
@@ -69,6 +107,8 @@
     font-size: 20px;
     cursor: pointer;
     margin: 20px;
+    text-decoration: none;
+    color:black;
 }
 #display-filme{
     text-align: center ;

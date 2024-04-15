@@ -6,6 +6,30 @@
     background-color: black;
     color:goldenrod;
 }
+.dark-mode #searchBar{
+    background-color: gold;
+    color: black;
+}
+.dark-mode #reset{
+    background-color: gold;
+    color: black;
+}
+.dark-mode #lista-filme{
+    height: auto;
+    border: 2px solid gold;
+    border-radius: 10px;
+    padding: 10px;
+    list-style-type: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 20px;
+    text-decoration: none;
+    color:gold;
+}
+.dark-mode .editBtn{
+    background-color: gold;
+    color: black;
+}
 #navbar-sort{
     display: flex;
     flex-direction: row;
@@ -45,6 +69,7 @@
     font-size: 20px;
     cursor: pointer;
     margin: 20px;
+    text-decoration: none;
 }
 #display-filme{
     text-align: center ;
