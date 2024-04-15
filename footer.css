@@ -35,3 +35,12 @@
 .copyright{
     text-align: center;
 }
+
+/*responsive*/
+
+#footer{
+    width: 100%;
+}
+.logo-footer{
+    width: 40px;
+}
