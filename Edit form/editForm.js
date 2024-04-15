@@ -24,7 +24,7 @@ const list = document.querySelector("#list");
 const dark = document.querySelector(".dark");
 
 let filme;
-let id = 2 ;
+let id = localStorage.getItem("idFilm");
 
 let formulaString = /^[a-zA-Z_]+( [a-zA-Z_]+)*$/;
 let formulaNumber = /^\d{10}$/;
@@ -44,17 +44,38 @@ let movie = {
   video: "",
 };
 
-  const editMovie = () => {
-    fetch(`http://localhost:3001/filme/${id}`, {
-      method: "PUT",
-      body: JSON.stringify(movie),
-      headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
-      })
-        .then((response) => response.json())
-      console.log(movie,id);
-  };
+const getMovies = async () => {
+  const filmLocal = await fetch(`http://localhost:3001/filme/${id}`).then(
+    (response) => response.json()
+  );
+  return filmLocal;
+};
+
+const populate = async () => {
+  const movie = await getMovies();
+  document.getElementById("name").value = movie.name;
+  document.getElementById("photo").value = movie.photo;
+  document.getElementById("description").value = movie.description;
+  document.getElementById("runtime").value = movie.runtime;
+  document.getElementById("rating").value = movie.rating;
+  document.getElementById("director").value = movie.director;
+  document.getElementById("year").value = movie.year;
+  document.getElementById("category").value = movie.category;
+  document.getElementById("video").value = movie.video;
+};
+
+populate();
+
+const editMovie = () => {
+  fetch(`http://localhost:3001/filme/${id}`, {
+    method: "PUT",
+    body: JSON.stringify(movie),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  }).then((response) => response.json());
+  console.log(movie, id);
+};
 
 submit.addEventListener("click", editMovie);
 
@@ -165,7 +186,7 @@ video.addEventListener("change", (e) => {
   }
 });
 
-   dark.addEventListener("click", () => {
-    let b = document.body;
-    b.classList.toggle("dark-mode");
-})
+dark.addEventListener("click", () => {
+  let b = document.body;
+  b.classList.toggle("dark-mode");
+});

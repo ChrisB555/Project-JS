@@ -12,7 +12,8 @@ const reset = document.querySelector("#reset");
 
 let modal = document.querySelector("#modal");
 let filme;
-let idFilm = "";
+let idFilm;
+let valoare;
 
 const getMovies = async () => {
   const filmeLocal = await fetch("http://localhost:3001/filme/").then(
@@ -45,7 +46,12 @@ const listen = async () => {
   document.body.addEventListener("click", function (event) {
     if (event.target.classList.contains("deleteBtn")) {
       idFilm = event.target.parentNode.children[1].textContent;
-      //console.log("continutul dorit", event, idFilm);
+      console.log("continutul dorit", event, idFilm);
+    }
+    if (event.target.classList.contains("editBtn")) {
+      idFilm = event.target.parentNode.children[1].textContent;
+      console.log("continutul dorit", event, idFilm);
+      localStorage.setItem("idFilm", idFilm);
     }
   });
 };
