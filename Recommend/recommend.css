@@ -43,4 +43,28 @@
     height: 37px;
     margin: 20px;
   }
+  #responsive-drop{
+    display: none;
+}
+  /*responsive*/
+  
+  @media only screen and   (max-width:440px){
+    
+    .input{
+      width: 70%;
+      height: 30px;
+      font-size: 12px;
+    }
+    #submit,#reset{
+      width: 100px;
+      height: 25px;
+  
+    }
+    #display,#otherMovies{
+      margin: 30px auto;
+      text-align: center;
+      width: 80%;
+    }
+   
+  }
   

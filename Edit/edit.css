@@ -153,15 +153,8 @@
     height: 40px;
     font-size: 14px;
 }
-=======
-.body {
-  background-color: #d9d9d9;
-  color: black;
-}
-.dark-mode {
-  background-color: black;
-  color: goldenrod;
-}
+
+
 #navbar-sort {
   display: flex;
   flex-direction: row;
@@ -286,4 +279,27 @@
   height: 40px;
   font-size: 14px;
 }
+#responsive-drop,#responsive-nav{
+  display:none;
+}
+@media only screen and   (max-width:440px){
 
+#searchBar{
+  margin-left: 10px;
+  width: 100px;
+  height: 20px;
+  font-size: 12px;
+}
+#reset{
+  margin-right: 10px;
+  font-size: 14px;
+  width: 100px;
+}
+.modal-content{
+  width: 70%;
+}
+#lista-filme{
+  width: 80%;
+  text-align: center;
+}
+}

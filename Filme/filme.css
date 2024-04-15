@@ -50,11 +50,10 @@
     margin-top: 15px;
 }
 #searchBar{
-    width: 100px;
-    height: 15px;
-    font-size: 16px;
-    border-radius: 5px;
-    margin-top: 13px;
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    margin-top: 10px;
 }
 .sort-dropdown{
     position: relative;
@@ -153,3 +152,88 @@
     font-size: 20px;
     margin-top: 15px;
 }
+#responsive-drop{
+    display: none;
+}
+
+/*responsive*/
+
+@media only screen and   (max-width:440px){
+   
+    #sort{
+        font-size: 14px;
+    }
+    #searchBar{
+        width: 65px;
+        height: 20px;
+        font-size: 11px;
+        margin: 13px;
+    }
+    #reset{
+        width: 60px;
+        font-size: 14px;
+        min-height: 50px;
+        margin-left: 10px;
+        margin-top: 7px;
+    }
+    .sort-dropdown{
+        font-size: 14px;
+        margin-left: 20px;
+    }
+    .dropdown-menu1,.dropdown-menu2,.dropdown-menu3{
+        width: 60px;
+        font-size: 14px;
+    }
+    .drop-rate i{
+        font-size: 8px;
+    }
+    #list{
+        margin-top: 90px;
+    }
+    #lista-filme{
+        width: 80%;
+        text-align: center;
+    }
+}
+
+@media  only screen  and (min-width:441px) and (max-width:900px){
+    #sort{
+        font-size: 16px;
+    }
+    #searchBar{
+        width: 85px;
+        height: 20px;
+        font-size: 13px;
+        margin: 13px;
+    }
+    #reset{
+        width: 80px;
+        font-size: 14px;
+        min-height: 50px;
+        margin-left: 10px;
+        margin-top: 7px;
+    }
+    .sort-dropdown{
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    .dropdown-menu1,.dropdown-menu2,.dropdown-menu3{
+        width: 60px;
+        font-size: 14px;
+    }
+    .drop-rate i{
+        font-size: 8px;
+    }
+    #list{
+        margin-top: 90px;
+    }
+    #lista-filme{
+        width: 30%;
+        text-align: center;
+    }
+    .main-img{
+        width: 80%;
+        height: auto;
+    }
+}
+
