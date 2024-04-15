@@ -143,6 +143,7 @@ dark.addEventListener("click", () => {
   let b = document.body;
   b.classList.toggle("dark-mode");
 });
+
 //responsive nav
 burger.addEventListener("click", () => {
   responsiveDrop.style.display = "block";
@@ -155,3 +156,4 @@ closeButton.addEventListener("click", () => {
   closeButton.style.display = "none";
   burger.style.display = "block";
 });
+

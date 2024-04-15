@@ -194,6 +194,7 @@ dark.addEventListener("click", () => {
   b.classList.toggle("dark-mode");
 });
 
+
 burger.addEventListener("click", () => {
   responsiveDrop.style.display = "block";
   closeBtn.style.display = "block";
