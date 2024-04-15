@@ -1,22 +1,24 @@
-#footer{
-    background-color: black;
-    color: white;
-    height: 135px;
+#footer {
+  background-color: black;
+  color: white;
+  height: 20vh;
+  width: 100vw;
 }
-.footer-flex{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.footer-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.logo-footer{
-    margin-right: 80px;
-    width: 80px;
-    margin-top: 30px;
+.logo-footer {
+  margin-right: 80px;
+  width: 80px;
+  margin-top: 30px;
+  filter: grayscale();
 }
-.terms{
-    margin-left: 80px;
-    margin-top: 20px;
+.terms {
+  margin-left: 80px;
+  margin-top: 20px;
 }
-.copyright{
-    text-align: center;
+.copyright {
+  text-align: center;
 }
