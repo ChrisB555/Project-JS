@@ -42,6 +42,7 @@ let movie = {
 };
 
 const addMovie = () => {
+  location.reload();
   fetch("http://localhost:3001/filme", {
     method: "POST",
     body: JSON.stringify(movie),
@@ -51,7 +52,9 @@ const addMovie = () => {
   }) 
   if(valid === true){
   location.href = "file:///C:/IT/Proiect%20JS/Filme/filme.html";
-  }else list.innerHTML = "fields must be completed!" 
+
+  }else list.innerHTML = "fields must be completed!" ;
+  
 };
 
 submit.addEventListener("click", addMovie);
