@@ -39,34 +39,30 @@
 
 /*responsive*/
 
-
-@media only screen and   (max-width:440px){
-#footer{
+@media only screen and (max-width: 440px) {
+  #footer {
     width: 100%;
-}
-.logo-footer{
+  }
+  .logo-footer {
     width: 40px;
     margin-right: 20px;
-}
-.terms h4{
- font-size: 14px;
-
-}
-.terms p,.copyright{
+  }
+  .terms h4 {
+    font-size: 14px;
+  }
+  .terms p,
+  .copyright {
     font-size: 10px;
-   
-}
-.terms{
+  }
+  .terms {
     margin-left: 20px;
+  }
 }
-}
-@media  only screen  and (min-width:441px) and (max-width:1282px){
-    
-
-#footer {
-  width: 100%;
-}
-.logo-footer {
-  width: 40px;
-
+@media only screen and (min-width: 441px) and (max-width: 1282px) {
+  #footer {
+    width: 100%;
+  }
+  .logo-footer {
+    width: 40px;
+  }
 }

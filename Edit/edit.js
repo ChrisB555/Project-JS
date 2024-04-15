@@ -10,13 +10,14 @@ const deleteModal = document.querySelector("#delete");
 const cancel = document.querySelector("#cancel");
 const reset = document.querySelector("#reset");
 
-let burger =document.querySelector("#burger");
-let closeButton =document.querySelector("#close");
-let responsiveDrop =document.querySelector("#responsive-drop");
+let burger = document.querySelector("#burger");
+let closeButton = document.querySelector("#close");
+let responsiveDrop = document.querySelector("#responsive-drop");
 
 let modal = document.querySelector("#modal");
 let filme;
-let idFilm = "";
+let idFilm;
+let valoare;
 
 const getMovies = async () => {
   const filmeLocal = await fetch("http://localhost:3001/filme/").then(
@@ -49,7 +50,12 @@ const listen = async () => {
   document.body.addEventListener("click", function (event) {
     if (event.target.classList.contains("deleteBtn")) {
       idFilm = event.target.parentNode.children[1].textContent;
-      //console.log("continutul dorit", event, idFilm);
+      console.log("continutul dorit", event, idFilm);
+    }
+    if (event.target.classList.contains("editBtn")) {
+      idFilm = event.target.parentNode.children[1].textContent;
+      console.log("continutul dorit", event, idFilm);
+      localStorage.setItem("idFilm", idFilm);
     }
   });
 };
@@ -142,10 +148,10 @@ burger.addEventListener("click", () => {
   responsiveDrop.style.display = "block";
   closeButton.style.display = "block";
   burger.style.display = "none";
-})
+});
 
 closeButton.addEventListener("click", () => {
   responsiveDrop.style.display = "none";
   closeButton.style.display = "none";
   burger.style.display = "block";
-})
+});

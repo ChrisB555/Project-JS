@@ -14,27 +14,23 @@
   width: 530px;
   height: 350px;
 }
-#responsive-drop{
-    display: none;
+#responsive-drop {
+  display: none;
 }
 /* responsive*/
 
-
-@media only screen and   (max-width:770px){
-
-.welcome-img{
-    width:80%;
+@media only screen and (max-width: 770px) {
+  .welcome-img {
+    width: 80%;
     height: auto;
-    margin-top: 80px ;
-}
-h2{
+    margin-top: 80px;
+  }
+  h2 {
     margin-top: 40px;
     margin-bottom: 200px;
+  }
 
-.welcome-img {
-  width: 80%;
-
+  .welcome-img {
+    width: 80%;
+  }
 }
-}
-
-
