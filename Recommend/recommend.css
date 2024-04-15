@@ -22,3 +22,48 @@
   height: 60vh;
   width: 100vw;
 }
+.body {
+    background-color: #d9d9d9;
+    color: black;
+  }
+  .dark-mode {
+    background-color: black;
+    color: goldenrod;
+  }
+  .dark-mode #form{
+    background-color: black;
+    color: gold;
+  }
+  .dark-mode #submit,.dark-mode #reset{
+    background-color: gold;
+    color: black;
+  }
+  #form {
+    background-color: #d9d9d9;
+    text-align: center;
+    color: black;
+  }
+  .input {
+    width: 500px;
+    height: 50px;
+    font-size: 16px;
+    margin: 10px auto;
+    padding-left: 10px;
+  }
+  #name {
+    margin-top: 30px;
+  }
+  #submit {
+    background-color: #1a3d71;
+    color: white;
+    width: 160px;
+    height: 37px;
+    margin: 20px;
+  }
+  #reset {
+    background-color:#35764F ;
+    color: white;
+    width: 160px;
+    height: 37px;
+    margin: 20px;
+  }
