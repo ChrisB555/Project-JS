@@ -1,42 +1,44 @@
-.body{
-    background-color:  #D9D9D9;  
-    color: black;
+.body {
+  background-color: #d9d9d9;
+  color: black;
 }
-.dark-mode{
-    background-color: black;
-    color:goldenrod;
-    
+.dark-mode {
+  background-color: black;
+  color: goldenrod;
 }
-.dark-mode #footer{
-    color:gold;
-    background-color: black;
-    border-top: 2px solid gold;
+.dark-mode #footer {
+  color: gold;
+  background-color: black;
+  border-top: 2px solid gold;
 }
 
-#footer{
-    background-color: black;
-    color: white;
-    height: 135px;
+#footer {
+  background-color: black;
+  color: white;
+  height: 20vh;
+  width: 100vw;
 }
-.footer-flex{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.footer-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.logo-footer{
-    margin-right: 80px;
-    width: 80px;
-    margin-top: 30px;
+.logo-footer {
+  margin-right: 80px;
+  width: 80px;
+  margin-top: 30px;
+  filter: grayscale();
 }
-.terms{
-    margin-left: 80px;
-    margin-top: 20px;
+.terms {
+  margin-left: 80px;
+  margin-top: 20px;
 }
-.copyright{
-    text-align: center;
+.copyright {
+  text-align: center;
 }
 
 /*responsive*/
+
 
 @media only screen and   (max-width:440px){
 #footer{
@@ -60,4 +62,11 @@
 }
 @media  only screen  and (min-width:441px) and (max-width:1282px){
     
+
+#footer {
+  width: 100%;
+}
+.logo-footer {
+  width: 40px;
+
 }
