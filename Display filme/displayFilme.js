@@ -1,15 +1,11 @@
 const dark = document.querySelector(".dark");
 const listDisplay = document.querySelector("#list-display");
 
-//let local = localStorage["filmDetail"];
-//console.log(local);
-
-//const urlParams = new URLSearchParams(window.location.search);
-//const recive = urlParams.get("send");
-//console.log(recive);
+let burger =document.querySelector("#burger");
+let closeBtn =document.querySelector("#close");
+let responsiveDrop =document.querySelector("#responsive-drop");
 
 let queryString = location.search.substring(1);
-console.log(queryString);
 let a = queryString.split("|");
 let reciveName = a[0];
 let name = reciveName.split("%20").join(" ");
@@ -40,3 +36,15 @@ dark.addEventListener("click", () => {
   let b = document.body;
   b.classList.toggle("dark-mode");
 });
+
+burger.addEventListener("click", () => {
+  responsiveDrop.style.display = "block";
+  closeBtn.style.display = "block";
+  burger.style.display = "none";
+})
+
+closeBtn.addEventListener("click", () => {
+  responsiveDrop.style.display = "none";
+  closeBtn.style.display = "none";
+  burger.style.display = "block";
+})

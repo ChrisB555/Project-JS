@@ -1,3 +1,4 @@
+
 .body {
   background-color: #d9d9d9;
   color: black;
@@ -49,6 +50,55 @@
   font-size: 28px;
   height: 0px;
   margin-top: 25px;
+
+}
+#close,#responsive-nav{
+    display: none;
 }
 
 /*responsive*/
+
+@media only screen and   (max-width:770px){
+
+    #nav{
+        display: none;
+    }   
+
+#responsive-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #35764F;
+}
+#responsive-drop{
+    display: none;
+
+}
+.link-menu{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: #35764F;
+}
+.link a{
+    color: black;
+    margin-left: 10px;
+}
+.logo{
+    width: 50px;
+    margin: 10px;
+  
+}
+.dark{
+    font-size: 20px;
+    margin-top: 15px;
+}
+#burger,#close{
+        font-size: 30px;
+        margin-top: 10px;
+}
+#close{
+    margin-right: 10px;
+}
+}
+

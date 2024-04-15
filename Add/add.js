@@ -22,6 +22,9 @@ const errorCategory = document.querySelector("#div-eight-error");
 const list = document.querySelector("#list");
 
 const dark = document.querySelector(".dark");
+let burger =document.querySelector("#burger");
+let closeBtn =document.querySelector("#close");
+let responsiveDrop =document.querySelector("#responsive-drop");
 
 let formulaString = /^[a-zA-Z_]+( [a-zA-Z_]+)*$/;
 let formulaNumber = /^\d{10}$/;
@@ -42,7 +45,7 @@ let movie = {
 };
 
 const addMovie = () => {
-  location.reload();
+ 
   fetch("http://localhost:3001/filme", {
     method: "POST",
     body: JSON.stringify(movie),
@@ -50,11 +53,13 @@ const addMovie = () => {
       "Content-type": "application/json; charset=UTF-8",
     },
   }) 
-  if(valid === true){
-  location.href = "file:///C:/IT/Proiect%20JS/Filme/filme.html";
 
-  }else list.innerHTML = "fields must be completed!" ;
+  if(valid === true){
+     
+  location.href = "file:///C:/IT/Proiect%20JS/Filme/filme.html";
   
+  }else list.innerHTML = "fields must be completed!" ;
+   //location.reload();
 };
 
 submit.addEventListener("click", addMovie);
@@ -173,3 +178,16 @@ dark.addEventListener("click", () => {
   main.classList.toggle("dark-mode");
   footer.classList.toggle("dark-mode");
 });
+
+//responsive nav
+burger.addEventListener("click", () => {
+  responsiveDrop.style.display = "block";
+  closeBtn.style.display = "block";
+  burger.style.display = "none";
+})
+
+closeBtn.addEventListener("click", () => {
+  responsiveDrop.style.display = "none";
+  closeBtn.style.display = "none";
+  burger.style.display = "block";
+})
