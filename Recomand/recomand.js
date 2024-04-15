@@ -9,6 +9,7 @@ const category = document.querySelector("#category");
 const runtime = document.querySelector("#runtime");
 
 const submit = document.querySelector("#submit");
+const reset = document.querySelector("#reset");
 
 const errorName = document.querySelector("#div-one-error");
 const errorDirector = document.querySelector("#div-six-error");
@@ -19,15 +20,16 @@ const errorVideo = document.querySelector("#div-nine-error");
 const errorRuntime = document.querySelector("#div-four-error");
 const errorYear = document.querySelector("#div-seven-error");
 const errorCategory = document.querySelector("#div-eight-error");
+const display = document.querySelector("#display");
+const otherMovies = document.querySelector("#otherMovies");
 const list = document.querySelector("#list");
 
 const dark = document.querySelector(".dark");
 
 let formulaString = /^[a-zA-Z_]+( [a-zA-Z_]+)*$/;
 let formulaNumber = /^\d{10}$/;
-let formulaUrl = /^https?:\/\/(www\.)?example\.com(?:\/.*)?$/;
 
-let stringCheck, valid;
+let stringCheck, valid,filme;
 
 let movie = {
   name: "",
@@ -41,23 +43,87 @@ let movie = {
   video: "",
 };
 
+const getMovies = async () => {
+  const filmeLocal = await fetch("http://localhost:3001/filme/").then(
+    (response) => response.json()
+  );
+  return filmeLocal;
+};
+
+const main = async () => {
+  const date = await getMovies();
+  filme = date;
+  console.log(filme);
+};
+
+main();
+
+
 const addMovie = () => {
-  location.reload();
   fetch("http://localhost:3001/filme", {
     method: "POST",
     body: JSON.stringify(movie),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
-  }) 
-  if(valid === true){
-  location.href = "file:///C:/IT/Proiect%20JS/Filme/filme.html";
-
-  }else list.innerHTML = "fields must be completed!" ;
+  });
+  if (valid === true) {
+   
+    localStorage.setItem("newMovie", movie.category);
+   
+    filme.forEach((e) => {
+        console.log(e.category.toLowerCase());
+      if (e.category.toLowerCase() === movie.category.toLowerCase()) {
+        let old = `<div>
+        <img class="main-img"src=${e.photo}/> 
+        <h3 id="h4">${e.name}</h3> 
+        <h5>Director: ${e.director}</h5> 
+        <h5>Release year: ${e.year}</h5> 
+        <h5>Ratings: ${e.rating} </h5>
+        <h5>Category: ${e.category} </h5>
+        </div>`;
+        otherMovies.innerHTML += `We can also recomand you : ${old}`;
+      }
+    });
+    displayMovie();
+    
+  } else list.innerHTML = "fields must be completed!";
+  restart();
   
 };
 
+reset.addEventListener("click", () => {
+    addMovie();
+    location.reload();
+})
+
+
 submit.addEventListener("click", addMovie);
+
+
+const restart = () => {
+  movieName.value = "";
+  photo.value = "";
+  description.value = "";
+  rating.value = "";
+  runtime.value = "";
+  director.value = "";
+  year.value = "";
+  video.value = "";
+  category.value = "";
+};
+
+const displayMovie = () => {
+  let p = `<div id = "lista-filme" target="_blank">
+        <img class="main-img"src=${movie.photo}/> 
+        <h3 id="h4">${movie.name}</h3> 
+        <h5>Director: ${movie.director}</h5> 
+        <h5>Release year: ${movie.year}</h5> 
+        <h5>Ratings: ${movie.rating} </h5>
+        <h5>Category: ${movie.category} </h5>
+        </div>`;
+  display.innerHTML += p;
+};
 
 movieName.addEventListener("change", (e) => {
   movie.name = e.target.value;

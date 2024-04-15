@@ -1,3 +1,18 @@
+.body{
+    background-color:  #D9D9D9;  
+    color: black;
+}
+.dark-mode{
+    background-color: black;
+    color:goldenrod;
+    
+}
+.dark-mode #footer{
+    color:gold;
+    background-color: black;
+    border-top: 2px solid gold;
+}
+
 #footer{
     background-color: black;
     color: white;
