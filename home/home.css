@@ -16,4 +16,8 @@
     height: 350px;
 }
 
+/* responsive*/
 
+.welcome-img{
+    width:80%;
+}
