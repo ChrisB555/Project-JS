@@ -22,6 +22,9 @@ const errorCategory = document.querySelector("#div-eight-error");
 const list = document.querySelector("#list");
 
 const dark = document.querySelector(".dark");
+let burger = document.querySelector("#burger");
+let closeBtn = document.querySelector("#close");
+let responsiveDrop = document.querySelector("#responsive-drop");
 
 let filme;
 let id = localStorage.getItem("idFilm");
@@ -189,4 +192,17 @@ video.addEventListener("change", (e) => {
 dark.addEventListener("click", () => {
   let b = document.body;
   b.classList.toggle("dark-mode");
+});
+
+
+burger.addEventListener("click", () => {
+  responsiveDrop.style.display = "block";
+  closeBtn.style.display = "block";
+  burger.style.display = "none";
+});
+
+closeBtn.addEventListener("click", () => {
+  responsiveDrop.style.display = "none";
+  closeBtn.style.display = "none";
+  burger.style.display = "block";
 });

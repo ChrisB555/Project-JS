@@ -19,7 +19,7 @@
 }
 
 .display-img{
-    width: 500px;
+    width:70%;
     height: auto;
     margin: 20px auto;
 }
@@ -29,6 +29,33 @@
   text-decoration: none;
  
 }
+#responsive-drop,#responsive-nav{
+  display:none;
+}
+
+/*responsive*/
+
+@media only screen and   (max-width:440px){
+  .display-img{
+    width:70%;
+    height: auto;
+    margin:10px auto ;
+}
+#display-filme{
+  text-align: center ;
+  margin-left:10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+
+}
+@media  only screen  and (min-width:441px) and (max-width:900px){
+  .display-img{
+    width:60%;
+    height: auto;
+    margin:10px auto ;
+}
+}  
 
 
   

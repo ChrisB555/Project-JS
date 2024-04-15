@@ -25,6 +25,9 @@ const otherMovies = document.querySelector("#otherMovies");
 const list = document.querySelector("#list");
 
 const dark = document.querySelector(".dark");
+let burger =document.querySelector("#burger");
+let closeBtn =document.querySelector("#close");
+let responsiveDrop =document.querySelector("#responsive-drop");
 
 let formulaString = /^[a-zA-Z_]+( [a-zA-Z_]+)*$/;
 let formulaNumber = /^\d{10}$/;
@@ -239,3 +242,15 @@ dark.addEventListener("click", () => {
   main.classList.toggle("dark-mode");
   footer.classList.toggle("dark-mode");
 });
+
+burger.addEventListener("click", () => {
+  responsiveDrop.style.display = "block";
+  closeBtn.style.display = "block";
+  burger.style.display = "none";
+})
+
+closeBtn.addEventListener("click", () => {
+  responsiveDrop.style.display = "none";
+  closeBtn.style.display = "none";
+  burger.style.display = "block";
+})

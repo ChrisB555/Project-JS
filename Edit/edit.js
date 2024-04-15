@@ -10,6 +10,10 @@ const deleteModal = document.querySelector("#delete");
 const cancel = document.querySelector("#cancel");
 const reset = document.querySelector("#reset");
 
+let burger = document.querySelector("#burger");
+let closeButton = document.querySelector("#close");
+let responsiveDrop = document.querySelector("#responsive-drop");
+
 let modal = document.querySelector("#modal");
 let filme;
 let idFilm;
@@ -139,3 +143,17 @@ dark.addEventListener("click", () => {
   let b = document.body;
   b.classList.toggle("dark-mode");
 });
+
+//responsive nav
+burger.addEventListener("click", () => {
+  responsiveDrop.style.display = "block";
+  closeButton.style.display = "block";
+  burger.style.display = "none";
+});
+
+closeButton.addEventListener("click", () => {
+  responsiveDrop.style.display = "none";
+  closeButton.style.display = "none";
+  burger.style.display = "block";
+});
+

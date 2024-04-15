@@ -28,6 +28,10 @@ const year1 = document.querySelector("#year1");
 const year2 = document.querySelector("#year2");
 const year3 = document.querySelector("#year3");
 
+let burger =document.querySelector("#burger");
+let closeBtn =document.querySelector("#close");
+let responsiveDrop =document.querySelector("#responsive-drop");
+
 
 let filme, found, f, stars,x,mov,int,str;
 let searchMovie = "";
@@ -418,7 +422,18 @@ const toggleDropdown3 = function () {
 year.addEventListener("click", () => {
 toggleDropdown3();
 });
+//responsive nav
 
+burger.addEventListener("click", () => {
+  responsiveDrop.style.display = "block";
+  closeBtn.style.display = "block";
+  burger.style.display = "none";
+})
 
+closeBtn.addEventListener("click", () => {
+  responsiveDrop.style.display = "none";
+  closeBtn.style.display = "none";
+  burger.style.display = "block";
+})
 
 
