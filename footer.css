@@ -1,3 +1,17 @@
+.body {
+  background-color: #d9d9d9;
+  color: black;
+}
+.dark-mode {
+  background-color: black;
+  color: goldenrod;
+}
+.dark-mode #footer {
+  color: gold;
+  background-color: black;
+  border-top: 2px solid gold;
+}
+
 #footer {
   background-color: black;
   color: white;
@@ -21,4 +35,13 @@
 }
 .copyright {
   text-align: center;
+}
+
+/*responsive*/
+
+#footer {
+  width: 100%;
+}
+.logo-footer {
+  width: 40px;
 }

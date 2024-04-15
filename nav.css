@@ -1,3 +1,19 @@
+.body {
+  background-color: #d9d9d9;
+  color: black;
+}
+.dark-mode {
+  background-color: black;
+  color: goldenrod;
+}
+.dark-mode #nav {
+  color: gold;
+  background-color: black;
+  border-bottom: 2px solid gold;
+}
+.dark-mode .link a {
+  color: gold;
+}
 #nav {
   display: flex;
   justify-content: space-around;
@@ -34,3 +50,5 @@
   height: 0px;
   margin-top: 25px;
 }
+
+/*responsive*/

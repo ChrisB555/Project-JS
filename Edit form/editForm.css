@@ -1,3 +1,20 @@
+.body {
+  background-color: #d9d9d9;
+  color: black;
+}
+.dark-mode {
+  background-color: black;
+  color: goldenrod;
+}
+.dark-mode #form {
+  background-color: black;
+  color: gold;
+}
+.dark-mode #submit,
+.dark-mode #reset {
+  background-color: gold;
+  color: black;
+}
 #form {
   background-color: #d9d9d9;
   text-align: center;

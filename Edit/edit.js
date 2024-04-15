@@ -29,7 +29,7 @@ const main = async () => {
     let p = `<a id = "lista-filme" target="_blank">
          <img class="main-img"src=${element.photo}/>
          <div class="idul">${element.id}</div> 
-         <h3 class="h3">${element.filmName}</h3>
+         <h3 class="h3">${element.name}</h3>
          <button class="editBtn" onclick="redirect()">Edit</button>
          <button class="deleteBtn" onclick="deleteMovie()" >Delete</button>
          </a>`;
@@ -77,7 +77,7 @@ const displayMovie = (movie) => {
   for (let film of movie) {
     listDisplay.innerHTML = `<div id = "display-filme" target="_blank">
         <img class="display-img" src=${film.photo}/> 
-        <h1>${film.filmName}</h1> 
+        <h1>${film.name}</h1> 
         <h3>Director:${film.director}   Year:${film.year}</h3> 
         <p id="display-p">Description :${film.description} </p>
         </div>`;
