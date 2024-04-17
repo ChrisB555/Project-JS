@@ -17,7 +17,6 @@ let responsiveDrop = document.querySelector("#responsive-drop");
 let modal = document.querySelector("#modal");
 let filme;
 let idFilm;
-let valoare;
 
 const getMovies = async () => {
   const filmeLocal = await fetch("http://localhost:3001/filme/").then(
@@ -59,6 +58,10 @@ const listen = async () => {
     }
   });
 };
+
+setTimeout(function () {
+  window.location.reload();
+}, 5000);
 
 //apelam functia listen care contine si main()!!!
 listen();
@@ -134,9 +137,7 @@ deleteModal.addEventListener("click", () => {
   //am scris separat functia de deleteConfirmed pentru a putea face un reload la pagina imediat dupa - altfel nu permite sintaxa javascript sa scrii nimic dupa fetch
   deleteConfirmed();
   //face reload la pagina ca sa dispara filmul sters
-  setTimeout(function () {
-    location.reload();
-  }, 1000);
+  window.location.reload();
 });
 
 dark.addEventListener("click", () => {
@@ -156,4 +157,3 @@ closeButton.addEventListener("click", () => {
   closeButton.style.display = "none";
   burger.style.display = "block";
 });
-
