@@ -30,7 +30,7 @@ let formulaString = /^[a-zA-Z_]+( [a-zA-Z_]+)*$/;
 let formulaNumber = /^\d{10}$/;
 let formulaUrl = /^https?:\/\/(www\.)?example\.com(?:\/.*)?$/;
 
-let stringCheck, valid;
+let stringCheck, valid,response;
 
 let movie = {
   name: "",
@@ -45,7 +45,6 @@ let movie = {
 };
 
 const addMovie = () => {
- 
   fetch("http://localhost:3001/filme", {
     method: "POST",
     body: JSON.stringify(movie),
@@ -53,15 +52,15 @@ const addMovie = () => {
       "Content-type": "application/json; charset=UTF-8",
     },
   }) 
+  .then((response) =>{
+    if(response.status === 200){
+      if(valid === true){    
+        location.href = "file:///C:/IT/Proiect%20JS/Filme/filme.html";    
+      }else list.innerHTML = "fields must be completed!" ;
+    }    
+});
 
-  if(valid === true){
-     
-  location.href = "file:///C:/IT/Proiect%20JS/Filme/filme.html";
-  
-  }else list.innerHTML = "fields must be completed!" ;
-   //location.reload();
-};
-
+}
 submit.addEventListener("click", addMovie);
 
 movieName.addEventListener("change", (e) => {

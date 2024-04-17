@@ -55,7 +55,9 @@ const getMovie = async () => {
 };
 
 const populate = async () => {
+
   movie = await getMovie();
+
   document.getElementById("name").value = movie.name;
   document.getElementById("photo").value = movie.photo;
   document.getElementById("description").value = movie.description;
