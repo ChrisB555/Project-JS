@@ -28,19 +28,20 @@ const year1 = document.querySelector("#year1");
 const year2 = document.querySelector("#year2");
 const year3 = document.querySelector("#year3");
 
-let burger =document.querySelector("#burger");
-let closeBtn =document.querySelector("#close");
-let responsiveDrop =document.querySelector("#responsive-drop");
+let burger = document.querySelector("#burger");
+let closeBtn = document.querySelector("#close");
+let responsiveDrop = document.querySelector("#responsive-drop");
 
-
-let filme, found, f, stars,x,mov,int,str;
+let filme, found, f, stars, x, mov, int, str;
 let searchMovie = "";
 let categoryArr = ["adventure", "action", "comedy", "drama", "thriller"];
 let searchCategory = [...categoryArr];
-let starsArr = [1,2,3,4,5];
+let starsArr = [1, 2, 3, 4, 5];
 let searchStar = [...starsArr];
-let yearArr = [2024,2023,2022];
+let yearArr = [2024, 2023, 2022];
 let searchYear = [...yearArr];
+
+
 
 
 const getMovies = async () => {
@@ -54,7 +55,13 @@ const main = async () => {
   const date = await getMovies();
   filme = date;
   date.forEach((element) => {
-    let p = `<a href= "file:///C:/IT/Proiect%20JS/Display%20filme/displayFilme.html?${element.name}|${element.photo}|${element.director}|${element.year}|${element.description}|${element.rating}|${element.runtime}|${element.video}"
+    let p = `<a href= "file:///C:/IT/Proiect%20JS/Display%20filme/displayFilme.html?${
+      element.name
+    }|${element.photo}|${element.director}|${element.year}|${
+      element.description
+    }|${element.rating}|${element.runtime}|${element.video}|${element.id}|${
+      element.category
+    }"
     target = "_self" id = "lista-filme">
        <img class="main-img"src=${element.photo}/> 
        <h3 id="h4">${element.name}</h3> 
@@ -70,20 +77,19 @@ const main = async () => {
 
 main();
 
-
 //functia care afiseaza stars in functie de rating
 
 const displayStar = (stars) => {
   stars = Math.round(stars * 2) / 2;
   let arr = [];
   let i;
-  for( i = stars; i >= 1; i--){
+  for (i = stars; i >= 1; i--) {
     arr.push(`<i id="star" class="ri-star-fill"></i>`);
-  };
-  if( i == .5){
+  }
+  if (i == 0.5) {
     arr.push(`<i class="ri-star-half-line" id="halfStar"></i>`);
-  };
-  for(  i = (5 - stars); i >= 1; i--){
+  }
+  for (i = 5 - stars; i >= 1; i--) {
     arr.push(`  <i class="ri-star-line" id="emptyStar"></i>`);
   }
   return arr.join("");
@@ -178,7 +184,6 @@ drama.addEventListener("click", () => {
   }
 });
 
-
 thriller.addEventListener("click", () => {
   if (searchCategory[4] === "thriller") {
     displaySort(
@@ -212,8 +217,9 @@ star1.addEventListener("click", () => {
           return x;
         } else {
           error.innerHTML = "Sorry!There is no movie with that rate";
-      }}
-  ));
+        }
+      })
+    );
   } else {
     error.innerHTML = "Sorry!There is no movie with that rate";
   }
@@ -231,18 +237,18 @@ star2.addEventListener("click", () => {
           list.innerHTML = "";
           error.innerHTML = "";
           return x;
-        }
-        else {
+        } else {
           error.innerHTML = "Sorry!There is no movie with that rate";
-      }}
-  ));
+        }
+      })
+    );
   } else {
     error.innerHTML = "Sorry!There is no movie with that rate";
   }
 });
 
 star3.addEventListener("click", () => {
-  if (searchStar[2] === 3) { 
+  if (searchStar[2] === 3) {
     displaySort(
       filme.filter((film) => {
         error.innerHTML = "";
@@ -263,7 +269,6 @@ star3.addEventListener("click", () => {
 });
 
 star4.addEventListener("click", () => {
-
   if (searchStar[3] === 4) {
     displaySort(
       filme.filter((film) => {
@@ -406,21 +411,21 @@ const toggleDropdown1 = function () {
   dropDown1.classList.toggle("dropdown");
 };
 category.addEventListener("click", () => {
-toggleDropdown1();
+  toggleDropdown1();
 });
 
 const toggleDropdown2 = function () {
   dropDown2.classList.toggle("dropdown");
 };
 rates.addEventListener("click", () => {
-toggleDropdown2();
+  toggleDropdown2();
 });
 
 const toggleDropdown3 = function () {
   dropDown3.classList.toggle("dropdown");
 };
 year.addEventListener("click", () => {
-toggleDropdown3();
+  toggleDropdown3();
 });
 //responsive nav
 
@@ -428,12 +433,10 @@ burger.addEventListener("click", () => {
   responsiveDrop.style.display = "block";
   closeBtn.style.display = "block";
   burger.style.display = "none";
-})
+});
 
 closeBtn.addEventListener("click", () => {
   responsiveDrop.style.display = "none";
   closeBtn.style.display = "none";
   burger.style.display = "block";
-})
-
-
+});

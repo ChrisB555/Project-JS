@@ -1,27 +1,4 @@
-#recommend-action {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  background-color: black;
-  height: 10vh;
-  width: 100vw;
-  color: white;
-}
-#recommend-button {
-  background-color: #35764f;
-  color: white;
-  width: fit-content;
-  height: 30px;
-  font-size: 20px;
-  margin-top: 15px;
-}
-#recommend-result {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 60vh;
-  width: 100vw;
-}
+
 .body {
     background-color: #d9d9d9;
     color: black;
@@ -38,36 +15,36 @@
     background-color: gold;
     color: black;
   }
-  #form {
-    background-color: #d9d9d9;
-    text-align: center;
+  #display,#randomDisplay{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #lista-filme{
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    list-style-type: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 20px auto;
+    text-decoration: none;
     color: black;
+    width: 30%;
+    text-align: center;
   }
-  .input {
-    width: 500px;
-    height: 50px;
-    font-size: 16px;
+  .main-img {
+    width: 100%;
+    height: 250px;
     margin: 10px auto;
-    padding-left: 10px;
   }
-  #name {
-    margin-top: 30px;
+  #error{
+    font-size: 20px;
+    color: orangered;
+    text-align: center;
   }
-  #submit {
-    background-color: #1a3d71;
-    color: white;
-    width: 160px;
-    height: 37px;
-    margin: 20px;
-  }
-  #reset {
-    background-color:#35764F ;
-    color: white;
-    width: 160px;
-    height: 37px;
-    margin: 20px;
-  }
-
+  
   #responsive-drop{
     display: none;
 }
@@ -75,20 +52,15 @@
   
   @media only screen and   (max-width:440px){
     
-    .input{
-      width: 70%;
-      height: 30px;
-      font-size: 12px;
-    }
-    #submit,#reset{
-      width: 100px;
-      height: 25px;
-  
-    }
-    #display,#otherMovies{
+   
+    #display{
       margin: 30px auto;
       text-align: center;
-      width: 80%;
+      width: 90%;
+    }
+    .main-img{
+      width:100%;
+      object-fit: contain;
     }
    
   }
