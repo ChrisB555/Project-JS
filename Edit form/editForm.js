@@ -77,6 +77,7 @@ const editMovie = async () => {
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
+
   }).then((response) => {
     if (response.status === 200) {
       if (valid === true) {
@@ -84,6 +85,25 @@ const editMovie = async () => {
       } else list.innerHTML = "fields must be completed!";
     }
   });
+
+
+  })
+  .then((response) =>{
+    if(response.status === 200){
+      if(valid === true){   
+       
+        location.href = `file:///C:/IT/Proiect%20JS/Filme/filme.html?`; 
+      }else list.innerHTML = "fields must be completed!" ;
+    }   
+});
+}
+
+submit.addEventListener("click",editMovie);
+
+
+  }).then((response) => response.json());
+  //console.log("log editMovie movie", movie, id);
+
 };
 
 submit.addEventListener("click", () => {
@@ -94,6 +114,7 @@ const redirect = async () => {
   await editMovie();
   window.location.href = "../Edit/edit.html";
 };
+
 
 movieName.addEventListener("change", (e) => {
   movie.name = e.target.value;

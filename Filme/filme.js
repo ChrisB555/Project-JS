@@ -41,6 +41,11 @@ let searchStar = [...starsArr];
 let yearArr = [2024, 2023, 2022];
 let searchYear = [...yearArr];
 
+
+
+
+
+
 const getMovies = async () => {
   const filmeLocal = await fetch("http://localhost:3001/filme/").then(
     (response) => response.json()
@@ -56,7 +61,13 @@ const main = async () => {
       element.name
     }|${element.photo}|${element.director}|${element.year}|${
       element.description
-    }|${element.rating}|${element.runtime}|${element.video}"
+
+    }|${element.rating}|${element.runtime}|${element.video}|${element.id}|${
+      element.category
+    }"
+
+
+
     target = "_self" id = "lista-filme">
        <img class="main-img"src=${element.photo}/> 
        <h3 id="h4">${element.name}</h3> 
