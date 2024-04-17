@@ -55,7 +55,6 @@ const getMovie = async () => {
 };
 
 const populate = async () => {
-
   movie = await getMovie();
 
   document.getElementById("name").value = movie.name;
@@ -79,6 +78,15 @@ const editMovie = async () => {
       "Content-type": "application/json; charset=UTF-8",
     },
 
+  }).then((response) => {
+    if (response.status === 200) {
+      if (valid === true) {
+        location.href = `file:///C:/IT/Proiect%20JS/Filme/filme.html?`;
+      } else list.innerHTML = "fields must be completed!";
+    }
+  });
+
+
   })
   .then((response) =>{
     if(response.status === 200){
@@ -95,6 +103,7 @@ submit.addEventListener("click",editMovie);
 
   }).then((response) => response.json());
   //console.log("log editMovie movie", movie, id);
+
 };
 
 submit.addEventListener("click", () => {
