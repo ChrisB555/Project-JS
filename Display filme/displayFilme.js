@@ -19,6 +19,19 @@ let reciveRating = a[5];
 let reciveRuntime = a[6];
 let runtime = reciveRuntime.split("%20").join(" ");
 let reciveVideo = a[7];
+let reciveId = a[8];
+let reciveCategory = a[9];
+
+
+let arrayFilm = localStorage.getItem("arrayFilm");
+let retArr = [];
+if(arrayFilm){
+  retArr = JSON.parse(arrayFilm);
+}
+retArr.push(reciveCategory);
+localStorage.setItem("arrayFilm", JSON.stringify(retArr));
+console.log(retArr);
+let response = JSON.parse(localStorage.getItem("arrayFilm"));
 
 const displayDetails = () => {
   listDisplay.innerHTML += `<div id = "display-filme" target="_blank">
