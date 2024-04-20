@@ -9,6 +9,7 @@ const closeBtn = document.querySelector(".close");
 const deleteModal = document.querySelector("#delete");
 const cancel = document.querySelector("#cancel");
 const reset = document.querySelector("#reset");
+const reload = document.querySelector("#reload");
 
 let burger = document.querySelector("#burger");
 let closeButton = document.querySelector("#close");
@@ -50,6 +51,7 @@ const listen = async () => {
     if (event.target.classList.contains("deleteBtn")) {
       idFilm = event.target.parentNode.children[1].textContent;
       console.log("continutul dorit", event, idFilm);
+      return idFilm;
     }
     if (event.target.classList.contains("editBtn")) {
       idFilm = event.target.parentNode.children[1].textContent;
@@ -59,9 +61,9 @@ const listen = async () => {
   });
 };
 
-setTimeout(function () {
-  window.location.reload();
-}, 5000);
+// setTimeout(function () {
+//   window.location.reload();
+// }, 5000);
 
 //apelam functia listen care contine si main()!!!
 listen();
@@ -124,8 +126,9 @@ cancel.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-const deleteConfirmed = () => {
-  fetch(`http://localhost:3001/filme/${idFilm}`, {
+const deleteConfirmed = async () => {
+  console.log("idFilm =", idFilm);
+  await fetch(`http://localhost:3001/filme/${idFilm}`, {
     method: "DELETE",
   })
     .then((response) => response.json())
@@ -136,8 +139,12 @@ deleteModal.addEventListener("click", () => {
   modal.style.display = "none";
   //am scris separat functia de deleteConfirmed pentru a putea face un reload la pagina imediat dupa - altfel nu permite sintaxa javascript sa scrii nimic dupa fetch
   deleteConfirmed();
+
   //face reload la pagina ca sa dispara filmul sters
-  window.location.reload();
+
+  setTimeout(function () {
+    window.location.reload();
+  }, 1000);
 });
 
 dark.addEventListener("click", () => {

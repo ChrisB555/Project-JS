@@ -41,11 +41,6 @@ let searchStar = [...starsArr];
 let yearArr = [2024, 2023, 2022];
 let searchYear = [...yearArr];
 
-
-
-
-
-
 const getMovies = async () => {
   const filmeLocal = await fetch("http://localhost:3001/filme/").then(
     (response) => response.json()
@@ -57,14 +52,11 @@ const main = async () => {
   const date = await getMovies();
   filme = date;
   date.forEach((element) => {
-    let p = `<a href= "file:///C:/IT/Proiect%20JS/Display%20filme/displayFilme.html?${
-      element.name
-    }|${element.photo}|${element.director}|${element.year}|${
-      element.description
-
-    }|${element.rating}|${element.runtime}|${element.video}|${element.id}|${
-      element.category
-    }"
+    let p = `<a href= "../Display filme/displayfilme.html?${element.name}|${
+      element.photo
+    }|${element.director}|${element.year}|${element.description}|${
+      element.rating
+    }|${element.runtime}|${element.video}|${element.id}|${element.category}"
 
 
 
