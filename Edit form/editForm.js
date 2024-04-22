@@ -47,7 +47,7 @@ let movie = {
   video: "",
 };
 
-const getMovies = async () => {
+const getMovie = async () => {
   const filmLocal = await fetch(`http://localhost:3001/filme/${id}`).then(
     (response) => response.json()
   );
@@ -55,7 +55,9 @@ const getMovies = async () => {
 };
 
 const populate = async () => {
-   movie = await getMovies();
+
+  movie = await getMovie();
+
   document.getElementById("name").value = movie.name;
   document.getElementById("photo").value = movie.photo;
   document.getElementById("description").value = movie.description;
@@ -69,13 +71,14 @@ const populate = async () => {
 
 populate();
 
-const editMovie = () => {
-  fetch(`http://localhost:3001/filme/${id}`, {
+const editMovie = async () => {
+  await fetch(`http://localhost:3001/filme/${id}`, {
     method: "PUT",
     body: JSON.stringify(movie),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
+
   })
   .then((response) =>{
     if(response.status === 200){
@@ -88,6 +91,20 @@ const editMovie = () => {
 }
 
 submit.addEventListener("click",editMovie);
+
+
+  }).then((response) => response.json());
+  //console.log("log editMovie movie", movie, id);
+};
+
+submit.addEventListener("click", () => {
+  redirect();
+});
+
+const redirect = async () => {
+  await editMovie();
+  window.location.href = "../Edit/edit.html";
+};
 
 
 movieName.addEventListener("change", (e) => {
@@ -201,7 +218,6 @@ dark.addEventListener("click", () => {
   let b = document.body;
   b.classList.toggle("dark-mode");
 });
-
 
 burger.addEventListener("click", () => {
   responsiveDrop.style.display = "block";
