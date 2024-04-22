@@ -10,8 +10,10 @@ let burger = document.querySelector("#burger");
 let closeBtn = document.querySelector("#close");
 let responsiveDrop = document.querySelector("#responsive-drop");
 
+
 let filme, p, random, lastIdRecommended, idRecommended;
 let idFilmArr1, idFilme, idFilmArr3;
+
 let categoryArr = ["adventure", "action", "comedy", "drama", "thriller"];
 let counts = {};
 let idArr = [];
@@ -32,6 +34,7 @@ const main = async () => {
   const date = await getMovies();
   filme = date;
   if (response === null) {
+
     random = filme[Math.floor(Math.random() * 10)];
     console.log("server movies", random);
     randomText.innerHTML = "We can recommend you:";
@@ -110,7 +113,26 @@ response.forEach((e) => {
   }
 });
 
-console.log(counts);
+   
+
+const displayStar = (stars) => {
+  stars = Math.round(stars * 2) / 2;
+  let arr = [];
+  let i;
+  for (i = stars; i >= 1; i--) {
+    arr.push(`<i id="star" class="ri-star-fill"></i>`);
+  }
+  if (i == 0.5) {
+    arr.push(`<i class="ri-star-half-line" id="halfStar"></i>`);
+  }
+  for (i = 5 - stars; i >= 1; i--) {
+    arr.push(`  <i class="ri-star-line" id="emptyStar"></i>`);
+  }
+  return arr.join("");
+};
+
+
+
 
 let maxCount = 0;
 let mostFrequent = null;
@@ -121,6 +143,7 @@ for (const category in counts) {
     mostFrequent = category;
   }
 }
+
 
 const refresh = refreshBtn.addEventListener("click", () => {
   localStorage.clear(
