@@ -25,6 +25,7 @@ let reciveCategory = a[9];
 
 let arrayFilm = localStorage.getItem("arrayFilm");
 let retArr = [];
+let retArrId = [];
 if(arrayFilm){
   retArr = JSON.parse(arrayFilm);
 }
@@ -32,6 +33,14 @@ retArr.push(reciveCategory);
 localStorage.setItem("arrayFilm", JSON.stringify(retArr));
 console.log(retArr);
 let response = JSON.parse(localStorage.getItem("arrayFilm"));
+
+let idFilmeAfterClick = localStorage.getItem("idFilmeAfterClick", retArrId);
+      if (idFilmeAfterClick) {
+        retArrId = JSON.parse(idFilmeAfterClick);
+      }
+      retArrId.push(reciveId);
+      localStorage.setItem("idFilmeAfterClick", JSON.stringify(retArrId));
+      console.log(retArrId);
 
 const displayDetails = () => {
   listDisplay.innerHTML += `<div id = "display-filme" target="_blank">

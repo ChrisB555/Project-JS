@@ -7,13 +7,14 @@
     background-color: black;
     color: goldenrod;
   }
-  .dark-mode #form{
-    background-color: black;
-    color: gold;
-  }
-  .dark-mode #submit,.dark-mode #reset{
+  
+  .dark-mode #refresh{
     background-color: gold;
     color: black;
+  }
+  .dark-mode #lista-filme{
+    color: gold;
+    border: 2px solid gold;
   }
   #display,#randomDisplay{
     display: flex;
@@ -44,7 +45,14 @@
     color: orangered;
     text-align: center;
   }
-  
+  #refresh{
+    background-color: #1a3d71;
+    color: white;
+    width: 160px;
+    height: 37px;
+    margin: 20px 100px;
+    text-align: center;
+  }
   #responsive-drop{
     display: none;
 }
